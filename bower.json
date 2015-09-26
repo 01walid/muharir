@@ -1,0 +1,26 @@
+{
+  "name": "muharir",
+  "version": "0.0.1",
+  "authors": [
+    "Walid ZIOUCHE <01walid@gmail.com>"
+  ],
+  "description": "Simple Markdown editor for RTL languages",
+  "main": "index.html",
+  "keywords": [
+    "RTL",
+    "markdown",
+    "editor"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-rtl": "~3.3.4",
+    "bootstrap-sass": "~3.3.5"
+  }
+}

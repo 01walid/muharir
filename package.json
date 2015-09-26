@@ -1,0 +1,35 @@
+{
+  "name": "muharir",
+  "version": "0.0.1",
+  "description": "Markdown Editor for RTL languages",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.5.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-csso": "^1.0.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-serve": "^1.2.0",
+    "wiredep": "^2.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/01walid/muharir.git"
+  },
+  "keywords": [
+    "RTL",
+    "markdown",
+    "editor"
+  ],
+  "author": "Walid ZIOUCHE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/01walid/muharir/issues"
+  },
+  "homepage": "https://github.com/01walid/muharir#readme"
+}

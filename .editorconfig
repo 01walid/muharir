@@ -1,0 +1,28 @@
+; indicate this is the root of the project
+root = true
+
+###########################################################
+; common
+###########################################################
+
+[*]
+charset = utf-8
+
+end_of_line = LF
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+indent_style = space
+indent_size = 2
+
+###########################################################
+; markdown
+###########################################################
+
+[*.md]
+trim_trailing_whitespace = false
+
+# Matches the exact files either package.json or .travis.yml
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2

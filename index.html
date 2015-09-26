@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>مُحرر - محرر ماركادون بسيط</title>
+
+  <link rel="stylesheet" href="/css/bootstrap-markdown.min.css">
+  <link rel="stylesheet" href="/css/codemirror.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- Load Bootstrap RTL theme from CDNJS -->
+  <link rel="stylesheet" href="/css/bootstrap-rtl.min.css">
+
+  <script src="/js/codemirror.js"></script>
+  <script src="/js/overlay.js"></script>
+  <script src="/js/xml.js"></script>
+  <script src="/js/markdown.js"></script>
+  <script src="/js/gfm.js"></script>
+  <script src="/js/javascript.js"></script>
+  <script src="/js/css.js"></script>
+  <script src="/js/htmlmixed.js"></script>
+  <script src="/js/clike.js"></script>
+  <script src="/js/meta.js"></script>
+</head>
+<body dir="rtl">
+
+  <div class="container">
+    <h1>مُحرر <small style="font-size:12px">(إصدار تجريبي)</small></h1>
+    <h4><small>محرر ماركداون بسيط، يمكن تخصيصه وتضمينه بسهولة.</small></h4>
+
+    <ul class="nav nav-tabs nav-justified">
+      <li role="presentation" class="active"><a href="#">تحرير</a></li>
+      <li role="presentation" class="disabled"><a href="#">معاينة (قريبا)</a></li>
+    </ul>
+
+    <textarea id="editor" name="editor">
+مُحرر هو محرر ماركداون (Markdown) بسيط للغاية، لا يحتاج منك أي جهد لتعلم الكتابة به. فقط أكتب أو عدّل هذا النص!
+يمكنك إدراج رابط بهذا الشكل: [نص الرابط](http://example.com). كما يمكنك أيضا **تثخين** النص، أو *إمالته* أو حتى جعله ~~مشطبا~~ إن احتجت لذلك :)
+
+> هذا مثال على اقتباس، لاحظ استباقه بعلامة أكبر (أو ربما تقرؤها أنت كعلامة أصغر :)  )
+
+يمكنك أيضا إدراج `inline code` داخل النص العربي نفسه :)
+
+يسمح لك مُحرر أيضا بإدارج نص كامل من الشِفرة البرمجية بهذا الشكل:
+```
+function greetings() {
+    echo "أهلا بالعالم";
+}
+```
+مع تغيير تلقائي للاتجاه وتجربة قراءة أمتع.
+# عنوان أول
+هذا مثال لعنوان، فقط قم بسبقه بعلامة (#) ثم مسافة.
+## عنوان ثاني
+هذا مثال عنوان فرعي من الدرجة الثانية لا حظ زيادة علامة (#) لجعله `<h2>`.
+### عنوان ثالث
+#### عنوان رابع
+
+أدرج صورًا بهذا الشكل:
+![نص الصورة](رابط_لاصورة)
+
+أو قائمة عناصر بهذا الشكل:
+* عنصر
+* عنصر آخر
+* عنصر آخر
+
+وإن احتجت قائمة مرتبتة:
+1. عنصر أول
+2. عنصر ثانٍ
+3. عنصر ثالث.
+
+مبدئيا هذا ما ستحتاجه لكتابة محتوًى مذهل :)
+</textarea>
+
+  <footer>
+    <h4>يمكنك تعديل محرر، تخصيصه أو تعديله <a href="https://github.com/01walid/muharir">من هنا</a>.</h4>
+  </footer>
+  </div>
+
+
+
+  <script type="text/javascript">
+
+    var content = localStorage.getItem('mContent');
+
+    var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+      value: "content",
+      mode:  "gfm",
+      direction: "rtl",
+      lineWrapping: true,
+    });
+
+    editor.setValue(content)
+
+    editor.on('change', function() {
+      localStorage.setItem('mContent', editor.getValue());
+    });
+  </script>
+
+</body>
+</html>
