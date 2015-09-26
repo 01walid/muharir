@@ -7,7 +7,6 @@
 
   <title>مُحرر - محرر ماركادون بسيط</title>
 
-  <link rel="stylesheet" href="css/bootstrap-markdown.min.css">
   <link rel="stylesheet" href="css/codemirror.css">
   <link rel="stylesheet" href="css/main.css">
   <!-- Load Bootstrap RTL theme from CDNJS -->
@@ -82,20 +81,12 @@ function greetings() {
 
   <script type="text/javascript">
 
-    var content = localStorage.getItem('mContent');
-
     var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
-      value: "content",
       mode:  "gfm",
       direction: "rtl",
       lineWrapping: true,
     });
 
-    editor.setValue(content)
-
-    editor.on('change', function() {
-      localStorage.setItem('mContent', editor.getValue());
-    });
   </script>
 
 </body>
